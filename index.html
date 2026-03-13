@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fabiana's course home page for WDD231 - Frontend Web Development I">
+    <meta name="author" content="Fabiana">
+    <title>Home | WDD231 - Fabiana</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script defer src="scripts/date.js"></script>
+    <script defer src="scripts/navigation.js"></script>
+    <script defer src="scripts/courses.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <svg class="logo" width="60" height="60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#2c5282" />
+                <text x="50" y="62" font-size="52" text-anchor="middle" fill="white" font-weight="bold">F</text>
+            </svg>
+            <span class="site-title">Fabiana's WDD231</span>
+        </div>
+
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="chamber/index.html">Chamber Project</a></li>
+                <li><a href="final-project/index.html">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <!-- About Me + Student Photo – side by side on larger screens -->
+        <div class="intro-grid">
+            <section class="about-me">
+                <h2>About Me</h2>
+                <p>Hello! I'm Fabiana from Salta, Argentina. I'm currently studying Web Frontend Development and
+                    passionate about creating accessible, responsive, and beautiful websites. This is my course home
+                    page for WDD231.</p>
+            </section>
+
+            <section class="student-photo">
+                <h2>Student Photo</h2>
+                <img src="images/student-photo.jpg" alt="Fabiana - WDD231 student portrait" width="400" height="500"
+                    loading="lazy">
+            </section>
+        </div>
+
+        <section class="courses-section">
+            <h2>Web Certificate Courses</h2>
+
+            <div class="filter-buttons">
+                <button data-filter="all" class="active">All</button>
+                <button data-filter="WDD">WDD</button>
+                <button data-filter="CSE">CSE</button>
+            </div>
+
+            <div class="course-list" id="courseList"></div>
+
+            <p class="total-credits">Total credits: <span id="totalCredits">0</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/fabym93" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="" width="32" height="32"
+                    loading="lazy">
+            </a>
+            <a href="https://www.linkedin.com/in/fabym93/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="" width="32" height="32"
+                    loading="lazy">
+            </a>
+        </div>
+
+        <p>&copy; <span id="currentyear"></span> |🌺 Fabiana Moya 🌺 | Salta, 🇦🇷</p>
+        <p id="lastModified">Last Modification: </p>
+    </footer>
+</body>
+
+</html>
