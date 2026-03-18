@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salta Chamber of Commerce - Business Directory</title>
+    <meta name="description"
+        content="Explore the business directory of the Salta Chamber of Commerce. Find local businesses, services, and resources to support economic growth and community in Salta, Argentina.">
+    <meta name="author" content="Fabiana Elizabeth Moya">
+    <meta name="keywords"
+        content="Salta Chamber of Commerce, business directory, local businesses, Salta, networking, economic development">
+
+    <!-- Normalize primero -->
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <!-- Small.css - Mobile first -->
+    <link rel="stylesheet" href="styles/small.css">
+
+    <!-- Larger.css - Desktop improvements -->
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Salta Chamber of Commerce - Business Directory">
+    <meta property="og:description"
+        content="Discover local businesses and services in Salta through our comprehensive directory.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Salta Chamber of Commerce">
+    <meta property="og:locale" content="es_AR">
+
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <div class="hero-container">
+        <img src="images/hero-placeholder.png" alt="Salta Chamber of Commerce hero image" class="hero-image">
+
+        <div class="hero-overlay">
+            <h1>Salta Chamber of Commerce</h1>
+            <p>Promoting the economic and community development of Salta</p>
+            <button class="keynote-btn">Keynote Tickets</button>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html" class="active">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <h1>Business Directory</h1>
+
+        <!-- View Toggle -->
+        <div class="view-toggle">
+            <button id="grid-btn" class="active">Grid View</button>
+            <button id="list-btn">List View</button>
+        </div>
+
+        <!-- Events + Weather Section  -->
+        <div class="info-grid">
+
+            <!-- Events -->
+            <section class="info-card events-card">
+                <h2>Events</h2>
+                <div id="events-list"></div>
+            </section>
+
+            <!-- Current Weather -->
+            <section class="info-card weather-card">
+                <h2>Current Weather</h2>
+                <div id="current-weather"></div>
+            </section>
+
+            <!-- Weather Forecast -->
+            <section class="info-card forecast-card">
+                <h2>Weather Forecast</h2>
+                <div id="weather-forecast"></div>
+            </section>
+
+        </div>
+
+        <!-- Members Directory -->
+        <section class="members-container" id="members-container">
+            <!-- upload from .json -->
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p><strong>Salta Chamber of Commerce</strong></p>
+                <p>España 339</p>
+                <p>A4400ANG | Salta, Argentina</p>
+                <p>+54 0387 4315358 / 4310189</p>
+                <p>administracion@comerciosalta.org.ar</p>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter/X"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+
+            <div class="development-info">
+                <p>Fabiana Elizabeth Moya | WDD 231 Project</p>
+                <p id="last-modified">Last Modification: </p>
+                <p>© 2026 Salta Chamber of Commerce</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

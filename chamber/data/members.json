@@ -1,0 +1,76 @@
+{
+    "members": [
+        {
+            "name": "IDWEB Salta",
+            "address": "España 339, Salta, Argentina",
+            "phone": "+54 387 431-5358",
+            "website": "https://www.idweb.com.ar",
+            "image": "idweb.jpg",
+            "level": 3,
+            "description": "Professional web design and digital application development"
+        },
+        {
+            "name": "Del Valle Graphic Studio",
+            "address": "Av. Belgrano 1245, Salta, Argentina",
+            "phone": "+54 387 422-9876",
+            "website": "https://www.estudiodelvalle.com.ar",
+            "image": "delvalle.jpg",
+            "level": 3,
+            "description": "Graphic design, branding and packaging"
+        },
+        {
+            "name": "Café del Portal",
+            "address": "Caseros 789, Salta, Argentina",
+            "phone": "+54 387 555-3344",
+            "website": "https://www.cafedelportal.com.ar",
+            "image": "cafeportal.jpg",
+            "level": 2,
+            "description": "Artisan coffee shop and corporate events"
+        },
+        {
+            "name": "Andes Construction",
+            "address": "Av. Hipólito Yrigoyen 2345, Salta, Argentina",
+            "phone": "+54 387 431-8899",
+            "website": "https://www.constructorandes.com.ar",
+            "image": "andes.jpg",
+            "level": 3,
+            "description": "Civil construction and real estate development"
+        },
+        {
+            "name": "Visión Clara Optics",
+            "address": "Mendoza 1567, Salta, Argentina",
+            "phone": "+54 387 444-1122",
+            "website": "https://www.visionclara.com.ar",
+            "image": "visionclara.jpg",
+            "level": 1,
+            "description": "Specialized optics and visual care"
+        },
+        {
+            "name": "El Norte Transport",
+            "address": "Ruta Nacional 9 Km 12, Salta, Argentina",
+            "phone": "+54 387 666-7788",
+            "website": "https://www.transporteselnorte.com.ar",
+            "image": "elnorte.jpg",
+            "level": 2,
+            "description": "Logistics and cargo transportation"
+        },
+        {
+            "name": "Los Cardones Boutique Hotel",
+            "address": "San Lorenzo 890, Salta, Argentina",
+            "phone": "+54 387 555-0123",
+            "website": "https://www.loscardoneshotel.com.ar",
+            "image": "cardones.jpg",
+            "level": 3,
+            "description": "Luxury lodging and experiential tourism"
+        },
+        {
+            "name": "La Estación Bakery",
+            "address": "Balcarce 567, Salta, Argentina",
+            "phone": "+54 387 431-2468",
+            "website": "https://www.laestacionpanaderia.com.ar",
+            "image": "laestacion.jpg",
+            "level": 1,
+            "description": "Artisanal bakery and regional products"
+        }
+    ]
+}

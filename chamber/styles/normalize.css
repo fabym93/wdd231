@@ -1,0 +1,28 @@
+/* styles/normalize.css */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.15;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+a { text-decoration: none; color: inherit; }
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
