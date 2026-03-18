@@ -4,20 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salta Chamber of Commerce - Business Directory</title>
+    <title>Directory - Salta Chamber of Commerce</title>
     <meta name="description"
-        content="Explore the business directory of the Salta Chamber of Commerce. Find local businesses, services, and resources to support economic growth and community in Salta, Argentina.">
+        content="Discover local businesses and services in Salta through the official Chamber of Commerce directory.">
     <meta name="author" content="Fabiana Elizabeth Moya">
-    <meta name="keywords"
-        content="Salta Chamber of Commerce, business directory, local businesses, Salta, networking, economic development">
 
-    <!-- Normalize primero -->
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Files -->
     <link rel="stylesheet" href="styles/normalize.css">
-
-    <!-- Small.css - Mobile first -->
     <link rel="stylesheet" href="styles/small.css">
-
-    <!-- Larger.css - Desktop improvements -->
     <link rel="stylesheet" href="styles/larger.css">
 
     <!-- Favicon -->
@@ -26,10 +29,12 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Salta Chamber of Commerce - Business Directory">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Directory - Salta Chamber of Commerce">
     <meta property="og:description"
-        content="Discover local businesses and services in Salta through our comprehensive directory.">
+        content="Discover local businesses and services in Salta through the official Chamber of Commerce directory.">
+    <meta property="og:image" content="https://fabym93.github.io/wdd231/chamber/images/hero-placeholder.png">
+    <meta property="og:url" content="https://fabym93.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Salta Chamber of Commerce">
     <meta property="og:locale" content="es_AR">
@@ -41,7 +46,9 @@
 
     <!-- HERO -->
     <div class="hero-container">
-        <img src="images/hero-placeholder.png" alt="Salta Chamber of Commerce hero image" class="hero-image">
+        <img src="images/hero-placeholder.jpg"
+            alt="Salta Chamber of Commerce - Supporting local businesses and community growth in Salta, Argentina"
+            class="hero-image">
 
         <div class="hero-overlay">
             <h1>Salta Chamber of Commerce</h1>
@@ -61,9 +68,9 @@
 
     </nav>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN -->
     <main>
-        <h1>Business Directory</h1>
+        <h2>Business Directory</h2>
 
         <!-- View Toggle -->
         <div class="view-toggle">
@@ -71,33 +78,26 @@
             <button id="list-btn">List View</button>
         </div>
 
-        <!-- Events + Weather Section  -->
+        <!-- Events + Weather Section -->
         <div class="info-grid">
-
-            <!-- Events -->
             <section class="info-card events-card">
-                <h2>Events</h2>
+                <h3>Events</h3>
                 <div id="events-list"></div>
             </section>
 
-            <!-- Current Weather -->
             <section class="info-card weather-card">
-                <h2>Current Weather</h2>
+                <h3>Current Weather</h3>
                 <div id="current-weather"></div>
             </section>
 
-            <!-- Weather Forecast -->
             <section class="info-card forecast-card">
-                <h2>Weather Forecast</h2>
+                <h3>Weather Forecast</h3>
                 <div id="weather-forecast"></div>
             </section>
-
         </div>
 
         <!-- Members Directory -->
-        <section class="members-container" id="members-container">
-            <!-- upload from .json -->
-        </section>
+        <section class="members-container" id="members-container"></section>
     </main>
 
     <!-- FOOTER -->
@@ -113,7 +113,7 @@
 
             <div class="social-icons">
                 <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
-                <a href="#"><img src="images/twitter.png" alt="Twitter/X"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter / X"></a>
                 <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
             </div>
 

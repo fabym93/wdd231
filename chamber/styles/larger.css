@@ -3,7 +3,7 @@
 
 @media (min-width: 768px) {
 
-    /* Hero section - more impactful on larger screens */
+    /* Hero section */
     .hero-container {
         height: 65vh;
         min-height: 500px;
@@ -17,25 +17,24 @@
         font-size: 1.4rem;
     }
 
-    /* Navigation - better spacing */
+    /* Navigation */
     .nav-list {
         gap: 2.2rem;
         padding: 1.2rem 0;
     }
 
-    /* Info Grid (Events + Weather) - 3 columns */
+    /* Info Grid (Events + Weather) */
     .info-grid {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
     }
 
-    /* Members directory - wider cards */
+    /* Members Directory */
     .members-container {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
     }
 
-    /* Larger and more elegant member cards */
     .member-card {
         border-radius: 16px;
     }
@@ -59,7 +58,7 @@
         height: 160px;
     }
 
-    /* Footer - 3 column layout */
+    /* Footer layout */
     .footer-content {
         grid-template-columns: 2fr 1fr 1.5fr;
         text-align: left;
@@ -90,7 +89,7 @@
         padding: 2rem;
     }
 
-    .info-card h2 {
+    .info-card h3 {
         font-size: 1.7rem;
     }
 
