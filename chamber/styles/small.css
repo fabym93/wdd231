@@ -5,7 +5,6 @@
     --accent: #2C3E2F;
     --dark: #1E2A2F;
     --light: #F8F1E9;
-    --gray: #555;
 
     --font-heading: Georgia, serif;
     --font-body: 'Inter', system-ui, sans-serif;
@@ -13,14 +12,14 @@
 
 /* ====================== GENERAL ====================== */
 body {
-    background-color: var(--secondary);
+    background-color: var(--light);
     color: var(--dark);
     font-family: var(--font-body);
     line-height: 1.6;
     font-size: 1.05rem;
 }
 
-/* ====================== HERO - HIGH CONTRAST FIX ====================== */
+/* ====================== HERO ====================== */
 .hero-container {
     position: relative;
     height: 55vh;
@@ -32,14 +31,13 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.75) contrast(1.15);
+    filter: brightness(0.80);
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(30, 42, 47, 0.92);
-
+    background: rgba(30, 42, 47, 0.88);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,35 +50,36 @@ body {
     font-family: var(--font-heading);
     font-size: 2.8rem;
     color: #FFFFFF;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 4px 15px rgba(0,0,0,0.9);
     margin-bottom: 0.5rem;
 }
 
 .hero-overlay p {
     font-size: 1.25rem;
-    color: #FFFFFF;
+    color: #F8F8F8;
     max-width: 520px;
-    margin-bottom: 1.8rem;
-    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
-.keynote-btn {
-    background-color: #FFFFFF;
-    color: var(--primary);
-    padding: 0.95rem 2.3rem;
+/* CTA Button - Texto blanco con buen contraste */
+.cta-btn {
+    background-color: var(--primary);
+    color: #FFFFFF;                    /* Texto blanco como pediste */
+    padding: 1rem 2.5rem;
     border: none;
     border-radius: 50px;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 6px 20px rgba(195, 124, 79, 0.5);
     transition: all 0.3s ease;
 }
 
-.keynote-btn:hover {
-    background-color: var(--secondary);
-    color: var(--dark);
-    transform: translateY(-3px);
+.cta-btn:hover {
+    background-color: #A56A3F;
+    transform: translateY(-4px);
 }
 
 /* ====================== NAVIGATION ====================== */
@@ -95,15 +94,9 @@ body {
 }
 
 .nav-list a {
-    color: white;
+    color: black;
     font-weight: 500;
     padding: 0.4rem 0.8rem;
-    transition: color 0.3s;
-}
-
-.nav-list a:hover,
-.nav-list a.active {
-    color: var(--dark);
 }
 
 /* ====================== MAIN ====================== */
@@ -137,7 +130,6 @@ main h2 {
     border-radius: 30px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s;
 }
 
 .view-toggle button.active,
@@ -157,7 +149,7 @@ main h2 {
 .info-card {
     background: white;
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     padding: 1.5rem;
 }
 
@@ -170,90 +162,58 @@ main h2 {
     padding-bottom: 0.5rem;
 }
 
-/* Current Weather & Forecast */
-#current-weather>div:first-child {
-    font-size: 4.5rem;
-    margin-bottom: 10px;
+/* ====================== SPOTLIGHT SECTION ====================== */
+.spotlight-section {
+    margin: 3rem 0;
 }
 
-.forecast-day {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.8rem 0;
-    border-bottom: 1px solid #eee;
-}
-
-.forecast-day:last-child {
-    border-bottom: none;
-}
-
-/* ====================== MEMBERS ====================== */
-.members-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.6rem;
-}
-
-.member-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
-    transition: all 0.3s ease;
-}
-
-.member-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(195, 124, 79, 0.22);
-}
-
-.member-card img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-}
-
-.card-body {
-    padding: 1.3rem;
-}
-
-.card-body h3 {
+.spotlight-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
     color: var(--dark);
 }
 
-.card-body .tagline {
-    color: var(--primary);
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+}
+
+.spotlight-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-8px);
+}
+
+.spotlight-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.spotlight-body {
+    padding: 1.4rem;
+}
+
+.spotlight-body h3 {
+    margin-bottom: 0.5rem;
 }
 
 .membership-level {
     display: inline-block;
-    margin-top: 12px;
+    margin-top: 10px;
     padding: 6px 14px;
     background-color: var(--accent);
     color: #FFFFFF;
     font-size: 0.85rem;
     font-weight: 700;
     border-radius: 30px;
-}
-
-/* ====================== LIST VIEW ====================== */
-.members-container.list-view {
-    grid-template-columns: 1fr;
-    gap: 1.8rem;
-}
-
-.members-container.list-view .member-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1.8rem;
-    padding: 1.2rem;
-}
-
-.members-container.list-view .member-card img {
-    width: 130px;
-    height: 130px;
-    border-radius: 12px;
 }
 
 /* ====================== FOOTER ====================== */
@@ -281,31 +241,14 @@ footer {
     margin: 1.5rem 0;
 }
 
-.social-icons a:hover {
-    color: var(--secondary);
-}
-
 /* ====================== RESPONSIVE ====================== */
 @media (min-width: 768px) {
-    .hero-overlay h1 {
-        font-size: 3.4rem;
+    .hero-overlay h1 { font-size: 3.4rem; }
+    main { padding: 0 2rem; }
+    .info-grid { 
+        grid-template-columns: 1fr 1fr 1fr; 
     }
-
-    main {
-        padding: 0 2rem;
-    }
-
-    .info-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media (min-width: 1024px) {
-    .info-grid {
-        gap: 2rem;
-    }
-
-    .nav-list {
-        gap: 2.5rem;
+    .spotlight-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }

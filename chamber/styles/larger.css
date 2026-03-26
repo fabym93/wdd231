@@ -1,9 +1,7 @@
 /* ====================== styles/larger.css ====================== */
-/* Desktop and large screen improvements */
 
 @media (min-width: 768px) {
 
-    /* Hero section */
     .hero-container {
         height: 65vh;
         min-height: 500px;
@@ -13,52 +11,23 @@
         font-size: 3.8rem;
     }
 
-    .hero-overlay p {
-        font-size: 1.4rem;
-    }
-
-    /* Navigation */
     .nav-list {
-        gap: 2.2rem;
+        gap: 2.5rem;
         padding: 1.2rem 0;
     }
 
-    /* Info Grid (Events + Weather) */
     .info-grid {
-        grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
     }
 
-    /* Members Directory */
-    .members-container {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .spotlight-grid {
         gap: 2rem;
     }
 
-    .member-card {
-        border-radius: 16px;
+    .spotlight-card img {
+        height: 230px;
     }
 
-    .member-card img {
-        height: 220px;
-    }
-
-    .card-body {
-        padding: 1.6rem;
-    }
-
-    /* List View on desktop */
-    .members-container.list-view .member-card {
-        gap: 2rem;
-        padding: 1.5rem;
-    }
-
-    .members-container.list-view .member-card img {
-        width: 160px;
-        height: 160px;
-    }
-
-    /* Footer layout */
     .footer-content {
         grid-template-columns: 2fr 1fr 1.5fr;
         text-align: left;
@@ -68,15 +37,9 @@
     .social-icons {
         justify-content: flex-start;
     }
-
-    .development-info {
-        text-align: right;
-    }
 }
 
-/* ====================== Large Desktop (1024px+) ====================== */
 @media (min-width: 1024px) {
-
     main {
         padding: 0 3rem;
     }
@@ -87,33 +50,5 @@
 
     .info-card {
         padding: 2rem;
-    }
-
-    .info-card h3 {
-        font-size: 1.7rem;
-    }
-
-    .members-container {
-        gap: 2.5rem;
-    }
-
-    .member-card img {
-        height: 240px;
-    }
-}
-
-/* ====================== Extra Large Desktop (1440px+) ====================== */
-@media (min-width: 1440px) {
-    main {
-        max-width: 1400px;
-        padding: 0 4rem;
-    }
-
-    .hero-container {
-        height: 70vh;
-    }
-
-    .info-grid {
-        gap: 2.5rem;
     }
 }
