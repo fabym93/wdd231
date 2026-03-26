@@ -1,6 +1,6 @@
 // scripts/main.js - Home Page
 
-const API_KEY = "da6ebde58a2775449783571883a0b5d020";   // 
+const API_KEY = "da6ebde58a2775449783571883a0b5d0";
 
 const CITY = "Salta,AR";
 

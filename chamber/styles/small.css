@@ -50,7 +50,7 @@ body {
     font-family: var(--font-heading);
     font-size: 2.8rem;
     color: #FFFFFF;
-    text-shadow: 0 4px 15px rgba(0,0,0,0.9);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
     margin-bottom: 0.5rem;
 }
 
@@ -59,13 +59,14 @@ body {
     color: #F8F8F8;
     max-width: 520px;
     margin-bottom: 2rem;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 /* CTA Button - Texto blanco con buen contraste */
 .cta-btn {
     background-color: var(--primary);
-    color: #FFFFFF;                    /* Texto blanco como pediste */
+    color: #FFFFFF;
+    /* Texto blanco como pediste */
     padding: 1rem 2.5rem;
     border: none;
     border-radius: 50px;
@@ -124,7 +125,7 @@ main h2 {
 
 .view-toggle button {
     padding: 0.8rem 2rem;
-    background: white;
+    background: rgb(253, 253, 253);
     color: var(--dark);
     border: 2px solid var(--primary);
     border-radius: 30px;
@@ -135,7 +136,7 @@ main h2 {
 .view-toggle button.active,
 .view-toggle button:hover {
     background: var(--primary);
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 /* ====================== INFO GRID ====================== */
@@ -147,9 +148,9 @@ main h2 {
 }
 
 .info-card {
-    background: white;
+    background: rgb(253, 232, 173);
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     padding: 1.5rem;
 }
 
@@ -183,7 +184,7 @@ main h2 {
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
@@ -243,11 +244,18 @@ footer {
 
 /* ====================== RESPONSIVE ====================== */
 @media (min-width: 768px) {
-    .hero-overlay h1 { font-size: 3.4rem; }
-    main { padding: 0 2rem; }
-    .info-grid { 
-        grid-template-columns: 1fr 1fr 1fr; 
+    .hero-overlay h1 {
+        font-size: 3.4rem;
     }
+
+    main {
+        padding: 0 2rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     .spotlight-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
