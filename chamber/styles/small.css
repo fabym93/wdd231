@@ -56,7 +56,7 @@ body {
 
 .hero-overlay p {
     font-size: 1.25rem;
-    color: #F8F8F8;
+    color: #FFFFFF;
     max-width: 520px;
     margin-bottom: 2rem;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
@@ -64,7 +64,7 @@ body {
 
 /* CTA Button */
 .cta-btn {
-    background-color: var(--primary);
+    background-color: #A35E33;
     color: #ffffff;
     padding: 1rem 2.5rem;
     border: none;
@@ -78,7 +78,7 @@ body {
 }
 
 .cta-btn:hover {
-    background-color: #A56A3F;
+    background-color: #814a28;
     transform: translateY(-4px);
 }
 
@@ -94,14 +94,14 @@ body {
 }
 
 .nav-list a {
-    color: #A56A3F;
+    color: #815231;
     font-weight: 500;
     padding: 0.4rem 0.8rem;
 }
 
 .nav-list a:hover,
 .nav-list a.active {
-    color: var(--secondary);
+    color: #8A6D11;
 }
 
 /* ====================== MAIN ====================== */
@@ -329,7 +329,7 @@ footer {
 }
 
 .submit-btn {
-    background-color: var(--primary);
+    background-color: #814a28;
     color: #FFFFFF;
     padding: 1rem 2.5rem;
     border: none;
@@ -349,7 +349,7 @@ footer {
 
 /* Membership Levels */
 .membership-levels {
-    margin-top: rem;
+    margin-top: 2rem;
 }
 
 .membership-levels h2 {
