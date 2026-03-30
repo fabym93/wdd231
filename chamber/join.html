@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - Salta Chamber of Commerce</title>
+    <meta name="description"
+        content="Apply for membership in the Salta Chamber of Commerce. Join our business community and access exclusive benefits.">
+    <meta name="author" content="Fabiana Elizabeth Moya">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="hero-container">
+            <img src="images/hero-placeholder.jpg"
+                alt="Join the Salta Chamber of Commerce - Become part of our business community" class="hero-image">
+            <div class="hero-overlay">
+                <h1>Join the Chamber</h1>
+                <p>Become part of Salta's most important business community</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" class="active">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <h2>Membership Application</h2>
+
+        <div class="join-container">
+
+            <!-- FORM SECTION -->
+            <section class="form-section">
+                <form id="membership-form" action="thankyou.html" method="get" class="membership-form">
+
+                    <div class="form-group">
+                        <label for="firstName">Applicant's First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Applicant's Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="orgTitle">Organizational Title</label>
+                        <input type="text" id="orgTitle" name="orgTitle" pattern="[A-Za-zÀ-ÿ\s\-]+" minlength="7"
+                            placeholder="e.g. General Manager, CEO">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="example@company.com"
+                            autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Mobile Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+54 387 1234567"
+                            autocomplete="tel">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="organization">Business / Organization Name <span class="required">*</span></label>
+                        <input type="text" id="organization" name="organization" required autocomplete="organization">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="level">Membership Level <span class="required">*</span></label>
+                        <select id="level" name="level" required>
+                            <option value="">Select a level</option>
+                            <option value="np">NP Membership - Non-profit (no fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description of your business/organization</label>
+                        <textarea id="description" name="description" rows="5"
+                            placeholder="Brief description..."></textarea>
+                    </div>
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <button type="submit" class="submit-btn">Submit Membership Application</button>
+                </form>
+            </section>
+
+            <!-- MEMBERSHIP LEVEL CARDS -->
+            <section class="membership-cards">
+                <h2>Membership Levels</h2>
+                <div class="levels-grid">
+                    <div class="level-card" data-level="np">
+                        <h3>NP Membership</h3>
+                        <p>For non-profit organizations</p>
+                        <a href="#" class="level-link">View benefits →</a>
+                    </div>
+                    <div class="level-card" data-level="bronze">
+                        <h3>Bronze</h3>
+                        <p>Entry level</p>
+                        <a href="#" class="level-link">View benefits →</a>
+                    </div>
+                    <div class="level-card" data-level="silver">
+                        <h3>Silver</h3>
+                        <p>Enhanced benefits</p>
+                        <a href="#" class="level-link">View benefits →</a>
+                    </div>
+                    <div class="level-card" data-level="gold">
+                        <h3>Gold</h3>
+                        <p>Premium level</p>
+                        <a href="#" class="level-link">View benefits →</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p><strong>Salta Chamber of Commerce</strong></p>
+                <p>España 339</p>
+                <p>A4400ANG | Salta, Argentina</p>
+                <p>+54 0387 4315358 / 4310189</p>
+                <p>administracion@comerciosalta.org.ar</p>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter / X"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+
+            <div class="development-info">
+                <p>Fabiana Elizabeth Moya | WDD 231 Project</p>
+                <p id="last-modified">Last Modification: </p>
+                <p>© 2026 Salta Chamber of Commerce</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

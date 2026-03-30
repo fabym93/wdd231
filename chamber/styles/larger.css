@@ -52,3 +52,25 @@
         padding: 2rem;
     }
 }
+
+/* ====================== JOIN PAGE - DESKTOP ====================== */
+
+@media (min-width: 768px) {
+    .levels-grid {
+        gap: 2rem;
+    }
+
+    .level-card {
+        padding: 2.2rem 1.8rem;
+    }
+
+    .membership-form {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .join-container {
+        gap: 5rem;
+    }
+}

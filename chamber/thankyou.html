@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Salta Chamber of Commerce</title>
+    <meta name="description"
+        content="Your membership application has been received. Thank you for joining the Salta Chamber of Commerce.">
+    <meta name="author" content="Fabiana Elizabeth Moya">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="hero-container">
+            <img src="images/hero-placeholder.jpg" alt="Thank you for applying to the Salta Chamber of Commerce"
+                class="hero-image">
+            <div class="hero-overlay">
+                <h1>Thank You!</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <div class="thankyou-container">
+            <div class="thankyou-box">
+                <h2>Your Membership Application Has Been Received</h2>
+                <p class="thankyou-message">
+                    Thank you for your interest in joining the Salta Chamber of Commerce.<br>
+                    We have successfully received your application and will contact you within 48 hours.
+                </p>
+
+                <div class="submitted-data">
+                    <h3>Submitted Information:</h3>
+                    <ul id="submitted-info">
+                        <!-- Data will be filled by JavaScript -->
+                    </ul>
+                </div>
+
+                <div class="thankyou-actions">
+                    <a href="index.html" class="cta-btn">Return to Home</a>
+                    <a href="join.html" class="secondary-btn">Submit Another Application</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p><strong>Salta Chamber of Commerce</strong></p>
+                <p>España 339</p>
+                <p>A4400ANG | Salta, Argentina</p>
+                <p>+54 0387 4315358 / 4310189</p>
+                <p>administracion@comerciosalta.org.ar</p>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter / X"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+
+            <div class="development-info">
+                <p>Fabiana Elizabeth Moya | WDD 231 Project</p>
+                <p id="last-modified">Last Modification: </p>
+                <p>© 2026 Salta Chamber of Commerce</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Get data from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const submittedInfo = document.getElementById('submitted-info');
+
+        submittedInfo.innerHTML = `
+            <li><strong>First Name:</strong> ${urlParams.get('firstName') || 'Not provided'}</li>
+            <li><strong>Last Name:</strong> ${urlParams.get('lastName') || 'Not provided'}</li>
+            <li><strong>Email:</strong> ${urlParams.get('email') || 'Not provided'}</li>
+            <li><strong>Mobile Phone:</strong> ${urlParams.get('phone') || 'Not provided'}</li>
+            <li><strong>Organization:</strong> ${urlParams.get('organization') || 'Not provided'}</li>
+            <li><strong>Submission Date & Time:</strong> ${urlParams.get('timestamp') || 'Not available'}</li>
+        `;
+    </script>
+
+</body>
+
+</html>
