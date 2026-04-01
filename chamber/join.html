@@ -86,8 +86,8 @@
 
                     <div class="form-group">
                         <label for="orgTitle">Organizational Title</label>
-                        <input type="text" id="orgTitle" name="orgTitle" pattern="[A-Za-zÀ-ÿ\s\-]+" minlength="7"
-                            title="Your position within the organization (minimum 7 characters)"
+                        <input type="text" id="orgTitle" name="orgTitle" pattern="^[A-Za-zÀ-ÿ\s\-]{7,}$" minlength="7"
+                            title="Your position within the organization (minimum 7 characters). Only letters, spaces and hyphens allowed."
                             autocomplete="organization-title" placeholder="e.g. General Manager, CEO">
                     </div>
 
