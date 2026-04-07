@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Salta - Salta Chamber of Commerce</title>
+    <meta name="description"
+        content="Discover the best places, attractions, and experiences in Salta, Argentina. Learn why Salta is a great place to live, work, and do business.">
+    <meta name="author" content="Fabiana Elizabeth Moya">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Import data as module -->
+    <script type="module" src="scripts/discover.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="hero-container">
+            <img src="images/hero-placeholder.jpg" alt="Discover the beauty and opportunities in Salta, Argentina"
+                class="hero-image">
+            <div class="hero-overlay">
+                <h1>Discover Salta</h1>
+                <p>Experience the culture, nature, and business opportunities of our city</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html" class="active">Discover</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <h2>Discover Salta</h2>
+        <p class="intro-text">Explore the best places, attractions, and experiences that make Salta a wonderful place to
+            live, work, and visit.</p>
+
+        <!-- Last Visit Message -->
+        <div id="visit-message" class="visit-message"></div>
+
+        <!-- Places Grid -->
+        <div class="discover-grid" id="discover-grid">
+            <!-- Cards will be inserted by JavaScript -->
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p><strong>Salta Chamber of Commerce</strong></p>
+                <p>España 339</p>
+                <p>A4400ANG | Salta, Argentina</p>
+                <p>+54 0387 4315358 / 4310189</p>
+                <p>administracion@comerciosalta.org.ar</p>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter / X"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+
+            <div class="development-info">
+                <p>Fabiana Elizabeth Moya | WDD 231 Project</p>
+                <p id="last-modified">Last Modification: </p>
+                <p>© 2026 Salta Chamber of Commerce</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
