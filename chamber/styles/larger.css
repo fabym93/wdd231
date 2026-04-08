@@ -1,5 +1,6 @@
-/* ====================== styles/larger.css ====================== */
+/* ====================== LARGER.CSS - DESKTOP STYLES ====================== */
 
+/* ====================== GENERAL DESKTOP ====================== */
 @media (min-width: 768px) {
 
     .hero-container {
@@ -16,10 +17,11 @@
         padding: 1.2rem 0;
     }
 
-    .info-grid {
-        gap: 2rem;
+    main {
+        padding: 0 2rem;
     }
 
+    .info-grid,
     .spotlight-grid {
         gap: 2rem;
     }
@@ -37,46 +39,37 @@
     .social-icons {
         justify-content: flex-start;
     }
-}
 
-@media (min-width: 1024px) {
-    main {
-        padding: 0 3rem;
+    /* Join Page */
+    .join-container {
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+        align-items: start;
     }
 
-    .hero-overlay h1 {
-        font-size: 4.2rem;
-    }
-
-    .info-card {
-        padding: 2rem;
-    }
-}
-
-/* ====================== JOIN PAGE - DESKTOP ====================== */
-
-@media (min-width: 768px) {
-    .levels-grid {
-        gap: 2rem;
+    .membership-form {
+        padding: 3rem;
     }
 
     .level-card {
         padding: 2.2rem 1.8rem;
     }
 
-    .membership-form {
-        padding: 3rem;
+    .levels-grid {
+        gap: 2rem;
+    }
+
+    /* Discover Page */
+    .discover-grid {
+        gap: 2rem;
+    }
+
+    .discover-card img {
+        height: 220px;
     }
 }
 
-@media (min-width: 1024px) {
-    .join-container {
-        gap: 5rem;
-    }
-}
-
-/* ====================== DISCOVER PAGE - GRID TEMPLATE AREAS ====================== */
-
+/* ====================== MEDIUM / TABLET ====================== */
 @media (min-width: 641px) and (max-width: 1024px) {
     .discover-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -88,7 +81,21 @@
     }
 }
 
+/* ====================== LARGE DESKTOP ====================== */
 @media (min-width: 1025px) {
+
+    main {
+        padding: 0 3rem;
+    }
+
+    .hero-overlay h1 {
+        font-size: 4.2rem;
+    }
+
+    .info-card {
+        padding: 2rem;
+    }
+
     .discover-grid {
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
@@ -99,5 +106,9 @@
 
     .discover-card img {
         height: 240px;
+    }
+
+    .join-container {
+        gap: 5rem;
     }
 }

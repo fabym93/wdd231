@@ -64,8 +64,8 @@ body {
 
 /* CTA Button */
 .cta-btn {
-    background-color: #A35E33;
-    color: #ffffff;
+    background-color: var(--primary);
+    color: #FFFFFF;
     padding: 1rem 2.5rem;
     border: none;
     border-radius: 50px;
@@ -78,7 +78,7 @@ body {
 }
 
 .cta-btn:hover {
-    background-color: #814a28;
+    background-color: #A56A3F;
     transform: translateY(-4px);
 }
 
@@ -101,7 +101,7 @@ body {
 
 .nav-list a:hover,
 .nav-list a.active {
-    color: #8A6D11;
+    color: var(--secondary);
 }
 
 /* ====================== MAIN ====================== */
@@ -143,53 +143,39 @@ main h2 {
     color: #FFFFFF;
 }
 
-/* ====================== INFO GRID ====================== */
-.info-grid {
+/* ====================== INFO GRID & SPOTLIGHT ====================== */
+.info-grid,
+.spotlight-grid {
     display: grid;
-    grid-template-columns: 1fr;
     gap: 1.5rem;
     margin: 2.5rem 0;
 }
 
-.info-card {
+.info-card,
+.spotlight-card {
     background: white;
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
 }
 
-.info-card h3 {
+.info-card h3,
+.spotlight-section h2,
+.spotlight-body h3 {
     color: var(--dark);
     font-family: var(--font-heading);
+}
+
+.info-card h3 {
     margin-bottom: 1.2rem;
     font-size: 1.5rem;
     border-bottom: 3px solid var(--secondary);
     padding-bottom: 0.5rem;
 }
 
-/* ====================== SPOTLIGHT SECTION ====================== */
-.spotlight-section {
-    margin: 3rem 0;
-}
-
-.spotlight-section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--dark);
-}
-
-.spotlight-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.8rem;
-}
-
 .spotlight-card {
-    background: white;
-    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .spotlight-card:hover {
@@ -204,10 +190,6 @@ main h2 {
 
 .spotlight-body {
     padding: 1.4rem;
-}
-
-.spotlight-body h3 {
-    margin-bottom: 0.5rem;
 }
 
 .membership-level {
@@ -250,28 +232,7 @@ footer {
     color: var(--secondary);
 }
 
-/* ====================== RESPONSIVE ====================== */
-@media (min-width: 768px) {
-    .hero-overlay h1 {
-        font-size: 3.4rem;
-    }
-
-    main {
-        padding: 0 2rem;
-    }
-
-    .info-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .spotlight-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-}
-
-/* ====================== JOIN PAGE STYLES ====================== */
-
-
+/* ====================== JOIN PAGE ====================== */
 .join-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -281,19 +242,8 @@ footer {
     padding: 0 1rem;
 }
 
-/* Form takes more space */
-.form-section {
-    flex: 2;
-}
-
-/* Cards section */
-.membership-cards {
-    flex: 1;
-}
-
-/* Form */
 .membership-form {
-    background: #feffb8;
+    background: white;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
@@ -329,7 +279,7 @@ footer {
 }
 
 .submit-btn {
-    background-color: #814a28;
+    background-color: var(--primary);
     color: #FFFFFF;
     padding: 1rem 2.5rem;
     border: none;
@@ -347,17 +297,7 @@ footer {
     transform: translateY(-3px);
 }
 
-/* Membership Levels */
-.membership-levels {
-    margin-top: 2rem;
-}
-
-.membership-levels h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--dark);
-}
-
+/* Membership Level Cards */
 .levels-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -396,41 +336,11 @@ footer {
     text-decoration: underline;
 }
 
-
-
-/* ====================== RESPONSIVE - TWO COLUMNS ====================== */
-@media (min-width: 768px) {
-    .join-container {
-        grid-template-columns: 2fr 1fr;
-        /* cards to theright */
-        gap: 4rem;
-        align-items: start;
-    }
-
-    .levels-grid {
-        grid-template-columns: 1fr;
-        /* desktop: one column(vertical) */
-    }
-
-    .membership-form {
-        padding: 2.5rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .join-container {
-        gap: 5rem;
-    }
-}
-
-/* ====================== MODAL STYLES ====================== */
+/* ====================== MODAL ====================== */
 .modal {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-color: rgba(0, 0, 0, 0.75);
     z-index: 9999;
     align-items: center;
@@ -462,21 +372,14 @@ footer {
     color: var(--primary);
 }
 
-.modal h2 {
+/* ====================== DISCOVER PAGE ====================== */
+.intro-text {
+    text-align: center;
+    font-size: 1.1rem;
     color: var(--dark);
-    margin-bottom: 1.5rem;
-    padding-right: 40px;
+    max-width: 700px;
+    margin: 0 auto 2rem;
 }
-
-/* Responsive modal */
-@media (min-width: 768px) {
-    .modal-content {
-        width: 80%;
-        max-width: 550px;
-    }
-}
-
-/* ====================== DISCOVER PAGE STYLES ====================== */
 
 .discover-grid {
     display: grid;
@@ -507,10 +410,6 @@ footer {
     transition: transform 0.4s ease;
 }
 
-.discover-card:hover img {
-    transform: scale(1.08);
-}
-
 .discover-card h3 {
     padding: 1rem 1.2rem 0.5rem;
     margin: 0;
@@ -535,7 +434,7 @@ footer {
     display: block;
     width: 100%;
     background: var(--primary);
-    color: white;
+    color: #FFFFFF;
     border: none;
     padding: 0.9rem;
     font-weight: 600;
@@ -547,7 +446,6 @@ footer {
     background: #A56A3F;
 }
 
-/* Visit Message */
 .visit-message {
     background: #fff3cd;
     color: #856404;
@@ -558,13 +456,48 @@ footer {
     font-weight: 500;
 }
 
-/* ====================== RESPONSIVE DISCOVER GRID ====================== */
+/* ====================== RESPONSIVE ====================== */
 @media (min-width: 768px) {
+    .hero-overlay h1 {
+        font-size: 3.4rem;
+    }
+
+    main {
+        padding: 0 2rem;
+    }
+
+    .info-grid,
+    .spotlight-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+
     .discover-grid {
         gap: 2rem;
     }
 
     .discover-card img {
         height: 220px;
+    }
+
+    .join-container {
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+        align-items: start;
+    }
+
+    .membership-form {
+        padding: 2.5rem;
+    }
+
+    .modal-content {
+        width: 80%;
+        max-width: 550px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .join-container {
+        gap: 5rem;
     }
 }

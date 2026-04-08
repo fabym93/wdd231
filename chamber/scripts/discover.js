@@ -102,13 +102,27 @@ function addHoverEffects() {
 
 // ====================== INITIALIZE ======================
 document.addEventListener('DOMContentLoaded', () => {
-    showLastVisitMessage();
     buildDiscoverCards();
     setGridLayout();
     addHoverEffects();
+    setLastModified();           // ← newline
 
-    // Update layout on resize
     window.addEventListener('resize', setGridLayout);
 
-    console.log("✅ Discover page initialized successfully");
+    console.log("✅ Discover page initialized");
 });
+
+// ====================== LAST MODIFICATION DATE ======================
+function setLastModified() {
+    const lastModEl = document.getElementById('last-modified');
+    if (lastModEl) {
+        const date = new Date(document.lastModified);
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+        lastModEl.textContent = `Last Modification: ${date.toLocaleDateString('en-US', options)}`;
+    }
+}
