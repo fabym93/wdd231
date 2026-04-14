@@ -1,5 +1,5 @@
 // script.js - final version with real images (children 0-5 yrs)
-// script.js - Versión final con imágenes locales reales (niños 0-5 años)
+
 
 function toggleMenu() {
     const menu = document.getElementById('nav-menu');
