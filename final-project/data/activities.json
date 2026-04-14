@@ -1,0 +1,17 @@
+[
+  {"id":1,"title":"Sensory Play with Colored Rice","ageGroup":"6 months - 3 years","category":"Sensory","description":"Develops fine motor skills and color recognition through safe tactile exploration.","duration":"20 minutes"},
+  {"id":2,"title":"Music & Movement Circle","ageGroup":"1 - 4 years","category":"Music","description":"Enhances rhythm, coordination and social interaction with songs and dancing.","duration":"25 minutes"},
+  {"id":3,"title":"Storytime with Puppets","ageGroup":"2 - 5 years","category":"Language","description":"Builds vocabulary and listening skills through interactive storytelling.","duration":"15 minutes"},
+  {"id":4,"title":"Outdoor Nature Walk","ageGroup":"2 - 5 years","category":"Physical","description":"Explores the garden while learning about plants and insects.","duration":"30 minutes"},
+  {"id":5,"title":"Art with Finger Painting","ageGroup":"1 - 4 years","category":"Art","description":"Encourages creativity and sensory development.","duration":"25 minutes"},
+  {"id":6,"title":"Building Blocks Engineering","ageGroup":"2 - 5 years","category":"Cognitive","description":"Develops spatial awareness and problem-solving skills.","duration":"30 minutes"},
+  {"id":7,"title":"Baby Yoga & Stretching","ageGroup":"3 - 18 months","category":"Physical","description":"Gentle movements to support motor development.","duration":"15 minutes"},
+  {"id":8,"title":"Cooking Activity - Fruit Salad","ageGroup":"3 - 5 years","category":"Life Skills","description":"Teaches following instructions and healthy eating.","duration":"35 minutes"},
+  {"id":9,"title":"Animal Sounds Recognition","ageGroup":"1 - 3 years","category":"Language","description":"Fun matching game with animal sounds and pictures.","duration":"20 minutes"},
+  {"id":10,"title":"Puzzle Time","ageGroup":"2 - 5 years","category":"Cognitive","description":"Improves concentration and hand-eye coordination.","duration":"20 minutes"},
+  {"id":11,"title":"Dance Party","ageGroup":"1 - 5 years","category":"Music","description":"Free movement to different music styles.","duration":"25 minutes"},
+  {"id":12,"title":"Water Play","ageGroup":"6 months - 3 years","category":"Sensory","description":"Safe water exploration with floating toys.","duration":"20 minutes"},
+  {"id":13,"title":"Emotion Faces Game","ageGroup":"2 - 5 years","category":"Social","description":"Helps children identify and express emotions.","duration":"15 minutes"},
+  {"id":14,"title":"Gardening - Planting Seeds","ageGroup":"3 - 5 years","category":"Science","description":"Learn about plant growth and responsibility.","duration":"30 minutes"},
+  {"id":15,"title":"Quiet Reading Corner","ageGroup":"1 - 5 years","category":"Language","description":"Independent or guided book exploration.","duration":"Variable"}
+]

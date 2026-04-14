@@ -1,0 +1,85 @@
+<!--Form Page -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Little Explorers Nursery in Salta for enrollment, visits, and inquiries.">
+    <meta name="author" content="Fabiana">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+
+    <meta property="og:title" content="Contact Us - Little Explorers Nursery">
+    <meta property="og:description"
+        content="Get in touch with Little Explorers Nursery in Salta for enrollment and information.">
+
+    <title>Little Explorers Nursery | Contact</title>
+    <link rel="stylesheet" href="/final-project/styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Little Explorers</a>
+        <span class="hamburger" onclick="toggleMenu()">☰</span>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact & Enrollment</h1>
+        <p>Fill out the form below and we will get back to you as soon as possible.</p>
+
+        <!-- Contact Image -->
+        <img src="https://kidsusamontessori.org/wp-content/uploads/2024/11/build-safe-environment.jpg" Little Explorers
+            Nursery building and playground in Salta" width="1200" height="500" loading="lazy"
+            style="width:100%; height:auto; border-radius:12px; margin:2rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+
+        <form id="enrollment-form" action="form-success.html" method="get">
+            <label for="parentName">Parent's Full Name</label>
+            <input type="text" id="parentName" name="parentName" required>
+
+            <label for="childName">Child's Full Name</label>
+            <input type="text" id="childName" name="childName" required>
+
+            <label for="childAge">Child's Age (in months or years)</label>
+            <input type="text" id="childAge" name="childAge" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="startDate">Preferred Start Date</label>
+            <input type="date" id="startDate" name="startDate">
+
+            <label for="message">Message / Questions</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+
+            <button type="submit">Send Inquiry</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Little Explorers Nursery - By: 🌺 Fabiana Moya 🌺 | Salta, AR</p>
+        <p>
+            <a href="https://www.youtube.com/your-video-link-here" target="_blank">Watch Project Video</a> |
+            <a href="attributions.html">Attributions</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

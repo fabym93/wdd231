@@ -1,0 +1,73 @@
+<!--Dynamic Content Page-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Educational programs and daily activities at Little Explorers Nursery in Salta.">
+    <meta name="author" content="Fabiana">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+
+    <meta property="og:title" content="Our Programs - Little Explorers Nursery">
+    <meta property="og:description" content="Discover our fun and educational activities for children in Salta.">
+
+    <title>Little Explorers Nursery | Programs</title>
+    <link rel="stylesheet" href="/final-project/styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Little Explorers</a>
+        <span class="hamburger" onclick="toggleMenu()">☰</span>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Our Educational Programs & Activities</h1>
+        <p>Browse our 15+ daily activities designed for different age groups (3 months to 5 years).</p>
+
+        <!-- Dynamic content will be loaded here by JavaScript -->
+        <div id="activity-grid" class="activity-grid"></div>
+    </main>
+
+    <!-- Modal Dialog -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <h2 id="modal-title"></h2>
+
+            <img id="modal-image" src="" alt="" style="width:100%; border-radius:10px; margin:1rem 0;" loading="lazy">
+
+            <p><strong>Age Group:</strong> <span id="modal-age"></span></p>
+            <p><strong>Category:</strong> <span id="modal-category"></span></p>
+            <p><strong>Duration:</strong> <span id="modal-duration"></span></p>
+            <p id="modal-desc"></p>
+
+            <button onclick="saveToFavorites()">Add to Favorites</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Little Explorers Nursery - By: 🌺 Fabiana Moya 🌺 | Salta, AR</p>
+        <p>
+            <a href="https://www.youtube.com/your-video-link-here" target="_blank">Watch Project Video</a> |
+            <a href="attributions.html">Attributions</a>
+        </p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
