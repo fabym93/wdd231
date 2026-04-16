@@ -1,4 +1,4 @@
-// script.js - Versión final corregida para pasar el audit
+// script.js - Versión final para todas las páginas
 
 // ==================== HAMBURGER MENU ====================
 function toggleMenu() {
@@ -8,7 +8,7 @@ function toggleMenu() {
     }
 }
 
-// ==================== MODAL ====================
+// ==================== MODAL (just for programs.html) ====================
 let currentActivity = null;
 
 function openModal(activity) {
@@ -20,7 +20,7 @@ function openModal(activity) {
     document.getElementById('modal-duration').textContent = activity.duration;
     document.getElementById('modal-desc').textContent = activity.description;
 
-    // Asignación de imágenes locales
+    // local image assignment
     let imageUrl = "images/sensory.jpg";
 
     switch (activity.category) {
@@ -35,14 +35,19 @@ function openModal(activity) {
         case "Life Skills": imageUrl = "images/life-skills.jpg"; break;
     }
 
-    document.getElementById('modal-image').src = imageUrl;
-    document.getElementById('modal-image').alt = activity.title;
+    const modalImage = document.getElementById('modal-image');
+    if (modalImage) {
+        modalImage.src = imageUrl;
+        modalImage.alt = activity.title;
+    }
 
-    document.getElementById('modal').style.display = 'flex';
+    const modal = document.getElementById('modal');
+    if (modal) modal.style.display = 'flex';
 }
 
 function closeModal() {
-    document.getElementById('modal').style.display = 'none';
+    const modal = document.getElementById('modal');
+    if (modal) modal.style.display = 'none';
 }
 
 function saveToFavorites() {
@@ -60,7 +65,7 @@ function saveToFavorites() {
     closeModal();
 }
 
-// ==================== LOAD ACTIVITIES ====================
+// ==================== LOAD ACTIVITIES (just for programs.html) ====================
 async function loadActivities() {
     const container = document.getElementById('activity-grid');
     if (!container) return;
@@ -106,40 +111,43 @@ async function loadActivities() {
         container.innerHTML = html;
 
     } catch (error) {
-        console.error(error);
-        container.innerHTML = `<p style="grid-column:1/-1;text-align:center;color:red;padding:3rem;">
-            Could not load activities. Please try again later.
-        </p>`;
+        console.error('Error loading activities:', error);
+        const container = document.getElementById('activity-grid');
+        if (container) {
+            container.innerHTML = `<p style="grid-column:1/-1;text-align:center;color:red;padding:3rem;">
+                Could not load activities. Please try again later.
+            </p>`;
+        }
     }
 }
 
-// ==================== INITIALIZE ====================
+// ==================== INITIALIZE - run in all pages ====================
 document.addEventListener('DOMContentLoaded', () => {
-    loadActivities();
 
-    // Hamburger Menu
+    // load activities if just container exists (programs.html)
+    if (document.getElementById('activity-grid')) {
+        loadActivities();
+    }
+
+    // Hamburger Menu - in all pages
     const hamburger = document.getElementById('hamburger');
     if (hamburger) {
         hamburger.addEventListener('click', toggleMenu);
     }
 
-    // Close modal button
+    // Modal handlers (just if exists on the page)
     const closeBtn = document.getElementById('close-modal');
     if (closeBtn) {
         closeBtn.addEventListener('click', closeModal);
     }
 
-    // Close modal when clicking outside
     const modal = document.getElementById('modal');
     if (modal) {
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
-            }
+            if (e.target === modal) closeModal();
         });
     }
 
-    // Add to Favorites button
     const saveBtn = document.getElementById('save-favorites');
     if (saveBtn) {
         saveBtn.addEventListener('click', saveToFavorites);
