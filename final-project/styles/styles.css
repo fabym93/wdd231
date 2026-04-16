@@ -272,3 +272,41 @@ footer a {
 footer a:hover {
     color: #e07a5f;
 }
+
+/* Modal Image Fix */
+.modal-content img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 1rem 0;
+    display: block;
+}
+
+/* improve the zise of modal img */
+.modal-content {
+    max-width: 520px;
+    width: 90%;
+    padding: 1.5rem;
+    border-radius: 12px;
+    position: relative;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* adjust to fav btn */
+#save-favorites {
+    background: #e07a5f;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+#save-favorites:hover {
+    background: #c15f4a;
+}

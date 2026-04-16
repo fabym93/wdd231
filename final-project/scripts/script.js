@@ -1,14 +1,10 @@
-// script.js - Versión final para todas las páginas
+// script.js - Versión with Event Delegation (more stable)
 
-// ==================== HAMBURGER MENU ====================
 function toggleMenu() {
     const menu = document.getElementById('nav-menu');
-    if (menu) {
-        menu.classList.toggle('show');
-    }
+    if (menu) menu.classList.toggle('show');
 }
 
-// ==================== MODAL (just for programs.html) ====================
 let currentActivity = null;
 
 function openModal(activity) {
@@ -20,9 +16,7 @@ function openModal(activity) {
     document.getElementById('modal-duration').textContent = activity.duration;
     document.getElementById('modal-desc').textContent = activity.description;
 
-    // local image assignment
     let imageUrl = "images/sensory.jpg";
-
     switch (activity.category) {
         case "Art": imageUrl = "images/art.jpg"; break;
         case "Music": imageUrl = "images/music.jpg"; break;
@@ -41,13 +35,11 @@ function openModal(activity) {
         modalImage.alt = activity.title;
     }
 
-    const modal = document.getElementById('modal');
-    if (modal) modal.style.display = 'flex';
+    document.getElementById('modal').style.display = 'flex';
 }
 
 function closeModal() {
-    const modal = document.getElementById('modal');
-    if (modal) modal.style.display = 'none';
+    document.getElementById('modal').style.display = 'none';
 }
 
 function saveToFavorites() {
@@ -65,7 +57,7 @@ function saveToFavorites() {
     closeModal();
 }
 
-// ==================== LOAD ACTIVITIES (just for programs.html) ====================
+// ==================== LOAD ACTIVITIES ====================
 async function loadActivities() {
     const container = document.getElementById('activity-grid');
     if (!container) return;
@@ -92,7 +84,7 @@ async function loadActivities() {
             }
 
             return `
-                <div class="activity-card" onclick="openModal(${JSON.stringify(activity)})">
+                <div class="activity-card" data-activity='${JSON.stringify(activity)}'>
                     <img src="${imageUrl}" 
                          alt="${activity.title}"
                          loading="lazy"
@@ -111,35 +103,39 @@ async function loadActivities() {
         container.innerHTML = html;
 
     } catch (error) {
-        console.error('Error loading activities:', error);
-        const container = document.getElementById('activity-grid');
-        if (container) {
-            container.innerHTML = `<p style="grid-column:1/-1;text-align:center;color:red;padding:3rem;">
-                Could not load activities. Please try again later.
-            </p>`;
-        }
+        console.error(error);
+        container.innerHTML = `<p style="grid-column:1/-1;text-align:center;color:red;padding:3rem;">
+            Could not load activities. Please try again later.
+        </p>`;
     }
 }
 
-// ==================== INITIALIZE - run in all pages ====================
+// ==================== EVENT DELEGATION ====================
 document.addEventListener('DOMContentLoaded', () => {
+    loadActivities();
 
-    // load activities if just container exists (programs.html)
-    if (document.getElementById('activity-grid')) {
-        loadActivities();
-    }
-
-    // Hamburger Menu - in all pages
+    // Hamburger
     const hamburger = document.getElementById('hamburger');
-    if (hamburger) {
-        hamburger.addEventListener('click', toggleMenu);
+    if (hamburger) hamburger.addEventListener('click', toggleMenu);
+
+    // Event Delegation for activity cards
+    const grid = document.getElementById('activity-grid');
+    if (grid) {
+        grid.addEventListener('click', (e) => {
+            const card = e.target.closest('.activity-card');
+            if (card) {
+                const activityData = card.dataset.activity;
+                if (activityData) {
+                    const activity = JSON.parse(activityData);
+                    openModal(activity);
+                }
+            }
+        });
     }
 
-    // Modal handlers (just if exists on the page)
+    // Modal buttons
     const closeBtn = document.getElementById('close-modal');
-    if (closeBtn) {
-        closeBtn.addEventListener('click', closeModal);
-    }
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
 
     const modal = document.getElementById('modal');
     if (modal) {
@@ -149,7 +145,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const saveBtn = document.getElementById('save-favorites');
-    if (saveBtn) {
-        saveBtn.addEventListener('click', saveToFavorites);
-    }
+    if (saveBtn) saveBtn.addEventListener('click', saveToFavorites);
 });
