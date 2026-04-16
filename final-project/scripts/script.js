@@ -1,4 +1,6 @@
-// script.js -
+// script.js - finalversion
+
+// ==================== MENU HAMBURGER ====================
 function toggleMenu() {
     const menu = document.getElementById('nav-menu');
     if (menu) {
@@ -6,6 +8,7 @@ function toggleMenu() {
     }
 }
 
+// ==================== MODAL ====================
 let currentActivity = null;
 
 function openModal(activity) {
@@ -17,6 +20,7 @@ function openModal(activity) {
     document.getElementById('modal-duration').textContent = activity.duration;
     document.getElementById('modal-desc').textContent = activity.description;
 
+    // local image assignment
     let imageUrl = "images/sensory.jpg";
 
     switch (activity.category) {
@@ -56,6 +60,7 @@ function saveToFavorites() {
     closeModal();
 }
 
+// ==================== LOAD ACTIVITIES ====================
 async function loadActivities() {
     const container = document.getElementById('activity-grid');
     if (!container) return;
@@ -108,11 +113,11 @@ async function loadActivities() {
     }
 }
 
-// Initialize everything
+// ==================== INITIALIZE ====================
 document.addEventListener('DOMContentLoaded', () => {
     loadActivities();
 
-    // Hamburger menu
+    // Hamburger Menu
     const hamburger = document.getElementById('hamburger');
     if (hamburger) {
         hamburger.addEventListener('click', toggleMenu);
@@ -122,7 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('modal');
     if (modal) {
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
+            if (e.target === modal) {
+                closeModal();
+            }
         });
     }
 });
