@@ -1,6 +1,6 @@
-// script.js - finalversion
+// script.js - Versión final corregida para pasar el audit
 
-// ==================== MENU HAMBURGER ====================
+// ==================== HAMBURGER MENU ====================
 function toggleMenu() {
     const menu = document.getElementById('nav-menu');
     if (menu) {
@@ -20,7 +20,7 @@ function openModal(activity) {
     document.getElementById('modal-duration').textContent = activity.duration;
     document.getElementById('modal-desc').textContent = activity.description;
 
-    // local image assignment
+    // Asignación de imágenes locales
     let imageUrl = "images/sensory.jpg";
 
     switch (activity.category) {
@@ -87,7 +87,7 @@ async function loadActivities() {
             }
 
             return `
-                <div class="activity-card" onclick='openModal(${JSON.stringify(activity)})'>
+                <div class="activity-card" onclick="openModal(${JSON.stringify(activity)})">
                     <img src="${imageUrl}" 
                          alt="${activity.title}"
                          loading="lazy"
@@ -123,6 +123,12 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.addEventListener('click', toggleMenu);
     }
 
+    // Close modal button
+    const closeBtn = document.getElementById('close-modal');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+
     // Close modal when clicking outside
     const modal = document.getElementById('modal');
     if (modal) {
@@ -131,5 +137,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 closeModal();
             }
         });
+    }
+
+    // Add to Favorites button
+    const saveBtn = document.getElementById('save-favorites');
+    if (saveBtn) {
+        saveBtn.addEventListener('click', saveToFavorites);
     }
 });
