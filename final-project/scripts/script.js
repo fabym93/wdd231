@@ -1,9 +1,9 @@
-// script.js - final version with real images (children 0-5 yrs)
-
-
+// script.js -
 function toggleMenu() {
     const menu = document.getElementById('nav-menu');
-    if (menu) menu.classList.toggle('show');
+    if (menu) {
+        menu.classList.toggle('show');
+    }
 }
 
 let currentActivity = null;
@@ -17,8 +17,7 @@ function openModal(activity) {
     document.getElementById('modal-duration').textContent = activity.duration;
     document.getElementById('modal-desc').textContent = activity.description;
 
-    // local path
-    let imageUrl = "images/sensory.jpg";   // default
+    let imageUrl = "images/sensory.jpg";
 
     switch (activity.category) {
         case "Art": imageUrl = "images/art.jpg"; break;
@@ -83,7 +82,7 @@ async function loadActivities() {
             }
 
             return `
-                <div class="activity-card" onclick='openModal(${JSON.stringify(activity)})' style="cursor:pointer;">
+                <div class="activity-card" onclick='openModal(${JSON.stringify(activity)})'>
                     <img src="${imageUrl}" 
                          alt="${activity.title}"
                          loading="lazy"
@@ -109,12 +108,20 @@ async function loadActivities() {
     }
 }
 
+// Initialize everything
 document.addEventListener('DOMContentLoaded', () => {
     loadActivities();
 
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    if (hamburger) {
+        hamburger.addEventListener('click', toggleMenu);
+    }
+
+    // Close modal when clicking outside
     const modal = document.getElementById('modal');
     if (modal) {
-        modal.addEventListener('click', e => {
+        modal.addEventListener('click', (e) => {
             if (e.target === modal) closeModal();
         });
     }
